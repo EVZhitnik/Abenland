@@ -1,0 +1,20 @@
+@use 'helpers' as *;
+
+.soc1als {
+    &__list {
+        display: flex;
+        gap: rem(25);
+    }
+
+    &__link {
+        display: flex;
+
+        @include hover {
+            svg {
+                path {
+                    fill: var(--color-accent);
+                }
+            }
+        }
+    }
+}
