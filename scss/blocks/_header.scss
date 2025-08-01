@@ -10,6 +10,7 @@
     animation-range: rem(100) rem(200);
     padding-block: rem(25);
     border-bottom: var(--border-base);
+    background-color: var(--color-light);
 
     @include mobile {
         padding-block: rem(10);
@@ -17,7 +18,7 @@
 
     @keyframes scrolling-header {
         to {
-            box-shadow: 0 0 1rem 0 var(--color-black);
+            box-shadow: 0 0 1rem 0 black;
         }
     }
     

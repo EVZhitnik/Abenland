@@ -336,6 +336,7 @@ section:not(:last-child) {
   animation-range: 6.25rem 12.5rem;
   padding-block: 1.5625rem;
   border-bottom: var(--border-base);
+  background-color: var(--color-light);
 }
 @media (width <= 47.99875rem) {
   .header {
@@ -344,7 +345,7 @@ section:not(:last-child) {
 }
 @keyframes scrolling-header {
   to {
-    box-shadow: 0 0 1rem 0 var(--color-black);
+    box-shadow: 0 0 1rem 0 black;
   }
 }
 .header__inner {
