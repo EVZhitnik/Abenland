@@ -1,0 +1,13 @@
+@use 'helpers' as *;
+
+:root {
+    --color-light: #FFFFFF;
+    --color-gray-base: #717A86;
+    --color-gray-alternate: #7C879D;
+    --color-accent: #4f5766;
+
+    --font-family-base: 'Open Sans', sans-serif;
+
+    --container-width: #{rem(1290)};
+    --container-padding-x: #{rem(16)};
+}
