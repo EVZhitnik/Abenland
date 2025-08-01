@@ -594,4 +594,56 @@ section:not(:last-child) {
   }
 }
 
+.services__inner {
+  display: grid;
+  row-gap: 1.875rem;
+}
+.services__body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "objects measurements" "objects design" "objects engineering";
+  gap: 1.875rem;
+}
+@media (width <= 47.99875rem) {
+  .services__body {
+    grid-template-columns: 1fr;
+    grid-template-areas: "objects" "measurements" "design" "engineering";
+  }
+}
+.services__objects {
+  grid-area: objects;
+  display: grid;
+  row-gap: 1.875rem;
+}
+.services__objects-content {
+  display: grid;
+  row-gap: 0.875rem;
+}
+.services__measurements {
+  grid-area: measurements;
+}
+.services__measurements-title {
+  border: var(--border-base);
+  padding: 1.0625rem 1.875rem;
+}
+.services__design {
+  grid-area: design;
+}
+.services__design-title {
+  border: var(--border-base);
+  padding: 1.0625rem 1.875rem;
+}
+.services__engineering {
+  grid-area: engineering;
+}
+.services__engineering-title {
+  border: var(--border-base);
+  padding: 1.0625rem 1.875rem;
+}
+@media (width <= 47.99875rem) {
+  .services__objects-image, .services__measurements-image, .services__design-image, .services__engineering-image {
+    justify-self: center;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
