@@ -4,6 +4,9 @@
 @use 'utils';
 @use 'globals';
 
+@use 'blocks/header.scss';
+@use 'blocks/burger-button.scss';
+@use 'blocks/soc1als.scss';
 
 // .header,
 // main > *:not(:last-child),

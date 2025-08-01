@@ -4,7 +4,11 @@
     --color-light: #FFFFFF;
     --color-gray-base: #717A86;
     --color-gray-alternate: #7C879D;
-    --color-accent: #4f5766;
+    --color-light-overlay: #c2c2c2;
+    --color-accent: #193f86;
+    --color-border: #E3E4E7;
+
+    --border-base: #{rem(1)} solid var(--color-border);
 
     --font-family-base: 'Open Sans', sans-serif;
 

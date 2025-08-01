@@ -41,7 +41,7 @@ input,
 textarea,
 select,
 svg * {
-    @include transition(color, background-color, opacity, box-shadow);
+    @include transition(color, fill, background-color, opacity, box-shadow);
 }
 
 a {
