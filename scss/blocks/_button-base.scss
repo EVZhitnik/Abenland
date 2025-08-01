@@ -1,0 +1,14 @@
+@use 'helpers' as *;
+
+.button-base {
+    @include flexbox(true, center, center);
+
+    padding: rem(14) rem(34.5);
+    background-color: var(--color-gray-alternate);
+    color: var(--color-light);
+
+    @include hover {
+        background-color: var(--color-accent);
+        color: var(--color-light);
+    }
+}

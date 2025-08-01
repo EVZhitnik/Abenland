@@ -1,0 +1,85 @@
+@use 'helpers' as *;
+
+.hero {
+    padding-top: rem(30);
+
+    &__inner {
+        display: grid;
+        grid-template-columns: calc(960 / 1290 * 100%) calc(300 / 1290 * 100%);
+        grid-template-areas: 
+            'workshop moscow'
+            'workshop perm'
+        ;
+        gap: rem(30);
+
+        @include laptop {
+            grid-template-columns: none;
+            grid-template-areas: 
+                'workshop workshop'
+                'moscow perm'
+            ;
+        }
+
+        @include mobile-s {
+            grid-template-areas: 
+                'workshop'
+                'moscow'
+                'perm'
+            ;
+        }
+    }
+
+    &__workshop {
+        grid-area: workshop;
+        background: url('../img/hero/hero-workshop-bg.jpg') center/cover no-repeat;
+        
+        &-content {
+            padding: rem(60) rem(30);
+            max-width: rem(430);
+        }
+
+        &-title {
+            &:not(:last-child) {
+                margin-bottom: rem(20);
+            }
+        }
+
+        &-description {
+            &:not(:last-child) {
+                margin-bottom: rem(105);
+            }
+        }
+
+        &-link {
+            justify-self: start;
+        }
+    }
+
+    &__moscow {
+        grid-area: moscow;
+        display: grid;
+        row-gap: rem(16);
+
+        @include laptop {
+            justify-self: end;
+        }
+
+        @include mobile-s {
+            justify-self: center;
+        }
+    }
+
+    &__perm {
+        grid-area: perm;
+        display: grid;
+        row-gap: rem(16);
+
+        @include laptop {
+            justify-self: start;
+        }
+
+        @include mobile-s {
+            justify-self: center;
+        }
+    }
+}
