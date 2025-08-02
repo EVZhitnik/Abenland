@@ -6,7 +6,7 @@
         row-gap: rem(30);
     }
 
-    &__body {
+    &__list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas: 
@@ -27,52 +27,21 @@
         }
     }
 
-    &__objects {
-        grid-area: objects;
-        display: grid;
-        row-gap: rem(30);
-
-        &-content {
-           display: grid;
-           row-gap: rem(14); 
+    &__item {
+        &:nth-child(1) {
+            grid-area: objects;
         }
-    }
 
-    &__measurements {
-        grid-area: measurements;
-
-        &-title {
-            border: var(--border-base);
-            padding: rem(17) rem(30);
+        &:nth-child(2) {
+            grid-area: measurements;
         }
-    }
 
-    &__design {
-        grid-area: design;
-
-        &-title {
-            border: var(--border-base);
-            padding: rem(17) rem(30);
+        &:nth-child(3) {
+            grid-area: design;
         }
-    }
 
-    &__engineering {
-        grid-area: engineering;
-
-        &-title {
-            border: var(--border-base);
-            padding: rem(17) rem(30);
-        }
-    }
-
-    &__objects, 
-    &__measurements, 
-    &__design, 
-    &__engineering {
-        &-image {
-            @include mobile {
-                justify-self: center;
-            }
+        &:nth-child(4) {
+            grid-area: engineering;
         }
     }
 }

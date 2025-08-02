@@ -3,7 +3,7 @@
 .hero {
     padding-top: rem(30);
 
-    &__inner {
+    &__list {
         display: grid;
         grid-template-columns: calc(960 / 1290 * 100%) calc(300 / 1290 * 100%);
         grid-template-areas: 
@@ -29,57 +29,16 @@
         }
     }
 
-    &__workshop {
-        grid-area: workshop;
-        background: url('../img/hero/hero-workshop-bg.jpg') center/cover no-repeat;
-        
-        &-content {
-            padding: rem(60) rem(30);
-            max-width: rem(430);
+    &__item {
+        &:nth-child(1) {
+            grid-area: workshop;
+            background: url('../img/hero/hero-workshop-bg.jpg') center/cover no-repeat;
         }
-
-        &-title {
-            &:not(:last-child) {
-                margin-bottom: rem(20);
-            }
+        &:nth-child(2) {
+            grid-area: moscow;
         }
-
-        &-description {
-            &:not(:last-child) {
-                margin-bottom: rem(105);
-            }
-        }
-
-        &-link {
-            justify-self: start;
-        }
-    }
-
-    &__moscow {
-        grid-area: moscow;
-        display: grid;
-        row-gap: rem(16);
-
-        @include laptop {
-            justify-self: end;
-        }
-
-        @include mobile-s {
-            justify-self: center;
-        }
-    }
-
-    &__perm {
-        grid-area: perm;
-        display: grid;
-        row-gap: rem(16);
-
-        @include laptop {
-            justify-self: start;
-        }
-
-        @include mobile-s {
-            justify-self: center;
+        &:nth-child(3) {
+            grid-area: perm;
         }
     }
 }
