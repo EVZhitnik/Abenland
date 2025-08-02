@@ -18,8 +18,4 @@
 @use 'blocks/blog.scss';
 @use 'blocks/blog-card.scss';
 
-// .header,
-// main > *:not(:last-child),
-// .footer {
-//     display: none !important;
-// }
+@use 'blocks/footer.scss';

@@ -216,6 +216,7 @@ svg * {
   --color-accent: #193f86;
   --color-border: #E3E4E7;
   --border-base: 0.0625rem solid var(--color-border);
+  --border-footer: 0.0625rem solid var(--color-light);
   --font-family-base: "Open Sans", sans-serif;
   --container-width: 80.625rem;
   --container-padding-x: 1rem;
@@ -748,6 +749,87 @@ section:not(:last-child) {
   color: var(--color-gray-alternate);
   background-color: var(--color-light);
   border: var(--border-base);
+}
+
+.footer {
+  padding-block: 1.5625rem;
+  background-color: var(--color-gray-alternate);
+  border-top: var(--border-footer);
+}
+.footer__inner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+  color: var(--color-light);
+}
+@media (width <= 47.99875rem) {
+  .footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.footer__body {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+@media (width <= 47.99875rem) {
+  .footer__body {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.footer__logo:not(:last-child) {
+  margin-right: 5.3125rem;
+}
+@media (width <= 63.99875rem) {
+  .footer__logo:not(:last-child) {
+    margin-right: 2.5rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .footer__logo:not(:last-child) {
+    margin: 0;
+  }
+}
+.footer__logo svg path {
+  fill: var(--color-light);
+}
+@media (any-hover: hover) {
+  .footer__logo:hover svg path {
+    fill: var(--color-accent);
+  }
+}
+@media (any-hover: none) {
+  .footer__logo:active svg path {
+    fill: var(--color-accent);
+  }
+}
+.footer__menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 0.625rem;
+}
+@media (width <= 47.99875rem) {
+  .footer__menu-list {
+    flex-direction: column;
+  }
+}
+.footer__menu-item:not(:last-child) {
+  margin-right: 5.3125rem;
+}
+@media (width <= 63.99875rem) {
+  .footer__menu-item:not(:last-child) {
+    margin-right: 2.5rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .footer__menu-item:not(:last-child) {
+    margin: 0;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
