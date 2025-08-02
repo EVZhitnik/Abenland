@@ -647,4 +647,85 @@ section:not(:last-child) {
   }
 }
 
+.blog {
+  padding-block: 3.75rem;
+  background-color: var(--color-gray-alternate);
+}
+@media (width <= 47.99875rem) {
+  .blog {
+    padding-block: 3.125rem;
+  }
+}
+.blog__inner {
+  display: grid;
+  row-gap: 1.875rem;
+  color: var(--color-light);
+}
+.blog__title-link--balcony, .blog__title-link--design {
+  width: 100%;
+  padding: 1.125rem 1.875rem;
+  color: var(--color-gray-alternate);
+  background-color: var(--color-light);
+  border: var(--border-base);
+}
+.blog__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "facade roof balcony" "kaliningrad kazan balcony" "aluminum design design";
+  gap: 1.875rem;
+}
+@media (width <= 47.99875rem) {
+  .blog__list {
+    grid-template-columns: 1fr;
+    grid-template-areas: "facade" "roof" "kaliningrad" "kazan" "aluminum" "design" "balcony";
+  }
+}
+.blog__item:nth-child(1) {
+  grid-area: facade;
+}
+.blog__item:nth-child(2) {
+  grid-area: roof;
+}
+.blog__item:nth-child(3) {
+  grid-area: balcony;
+  flex-grow: 3;
+}
+.blog__item:nth-child(4) {
+  grid-area: kaliningrad;
+}
+.blog__item:nth-child(5) {
+  grid-area: kazan;
+}
+.blog__item:nth-child(6) {
+  grid-area: aluminum;
+}
+.blog__item:nth-child(7) {
+  grid-area: design;
+}
+.blog__content {
+  display: grid;
+  row-gap: 1rem;
+}
+.blog__wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+@media (width <= 47.99875rem) {
+  .blog__image img {
+    width: 100%;
+  }
+}
+.blog__image--balcony, .blog__image--design {
+  flex-grow: 1;
+}
+.blog__image--balcony img, .blog__image--design img {
+  height: 100%;
+  object-fit: cover;
+}
+.blog__text {
+  display: grid;
+  row-gap: 0.875rem;
+}
+
 /*# sourceMappingURL=main.css.map */
