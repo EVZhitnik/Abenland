@@ -9,7 +9,8 @@
     --color-border: #E3E4E7;
 
     --border-base: #{rem(1)} solid var(--color-border);
-
+    --border-footer: #{rem(1)} solid var(--color-light);
+    
     --font-family-base: 'Open Sans', sans-serif;
 
     --container-width: #{rem(1290)};

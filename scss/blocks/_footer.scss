@@ -1,0 +1,84 @@
+@use 'helpers' as *;
+
+.footer {
+    padding-block: rem(25);
+    background-color: var(--color-gray-alternate);
+    border-top: var(--border-footer);
+
+    &__inner {
+        @include flexbox(true, space-between, center);
+
+        gap: rem(20);
+        color: var(--color-light);
+
+        @include mobile {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+        gap: rem(20);
+
+        @include mobile {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__logo {
+        &:not(:last-child) {
+            margin-right: rem(85);
+
+            @include tablet {
+                margin-right: rem(40);
+            }
+
+            @include mobile {
+                margin: 0;
+            }
+        }
+
+        svg {
+            path {
+                fill: var(--color-light);
+            }
+        }
+
+        @include hover {
+            svg {
+                path {
+                    fill: var(--color-accent);
+                }
+            }        
+        }
+    }
+
+    &__menu {
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: rem(10);
+
+            @include mobile {
+                flex-direction: column;
+            }
+        }
+
+        &-item {
+            &:not(:last-child) {
+                margin-right: rem(85);
+
+                @include tablet {
+                    margin-right: rem(40);
+                }
+
+                @include mobile {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
